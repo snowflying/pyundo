@@ -7,7 +7,7 @@ from pytask.task import TaskBase
 from pytask.exceptions import DoError, UndoError
 
 
-class Flow(object):
+class LineFlow(object):
     def __init__(self, retry=0):
         self.retry = retry
         self._tasks = []
