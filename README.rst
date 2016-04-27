@@ -1,7 +1,7 @@
-pytask
+pyundo
 ======
 
-A task flow in Python.
+A task flow in Python with ``do`` and ``undo``.
 
 Example
 =======
