@@ -13,12 +13,18 @@ class LineFlow(object):
         self._tasks = []
 
     def add(self, task):
+        """Add a task to execute."""
         if not isinstance(task, TaskBase):
             raise TypeError("Task must be the sub-class pytask.TaskBase")
 
         self._tasks.append(task)
 
     def tasks(self, index=None):
+        """Get the task(s).
+
+        If giving `index`, return the specific Nth task. Or, return the list
+        of all the task.
+        """
         if index:
             return self._tasks[index]
         return copy.deepcopy(self._tasks)
@@ -48,6 +54,15 @@ class LineFlow(object):
         raise UndoError("Failed to undo the {0}th task: {1}".format(count, _err))
 
     def execute(self):
+        """Execute all the tasks.
+
+        If a certain task fails, it will undo all the tasks that have executed
+        successfully.
+
+        @Exception:
+            If a task failed and undo succeeded, raise `DoError`.
+            If undo failed, raise `UndoError`.
+        """
         _exec_tasks = []
         count = 0
         _err = None
