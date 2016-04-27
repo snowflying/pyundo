@@ -9,7 +9,7 @@ Example
 ::
 
   from __future__ import print_function
-  from pytask import TaskBase, LineFlow
+  from pyundo import TaskBase, LineFlow
 
 
   class Task(TaskBase):

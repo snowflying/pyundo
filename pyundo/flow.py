@@ -3,8 +3,8 @@ from __future__ import absolute_import, print_function
 
 import copy
 
-from pytask.task import TaskBase
-from pytask.exceptions import DoError, UndoError
+from pyundo.task import TaskBase
+from pyundo.exceptions import DoError, UndoError
 
 
 class LineFlow(object):

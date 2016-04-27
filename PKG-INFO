@@ -1,8 +1,8 @@
 Metadata-Version: 1.1
-Name: pytask
+Name: pyundo
 Version: 0.1
 Summary: A task flow in Python
-Home-page: https://github.com/xgfone/pytask
+Home-page: https://github.com/xgfone/pyundo
 Author: xgfone
 Author-email: xgfone@126.com
 License: UNKNOWN
